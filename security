@@ -1,0 +1,47 @@
+Here are the other protection topics worth thinking about for a public chatbot, grouped by concern.
+
+**1. Secrets and key security**
+- **Environment variables only.** Never commit your API key to GitHub. Add `.env` to `.gitignore`.
+- **Restrict the key.** In Google Cloud Console, limit the key to the Generative Language API only.
+- **Rotate keys.** Replace the key immediately if you ever think it leaked.
+- **Secret scanning:** GitHub secret scanning and GitGuardian catch accidentally pushed keys.
+
+**2. Bot and abuse protection**
+- **Cloudflare Turnstile** or **hCaptcha** to block scripts.
+- **Vercel Firewall / Attack Challenge Mode** to challenge suspicious traffic at the edge.
+- **Cloudflare (free plan)** in front of your domain for DDoS protection and its WAF (web application firewall).
+- **Login requirement** for heavy use, using Clerk, Supabase Auth, or Auth0. This is the strongest protection against strangers using your quota.
+
+**3. AI-specific risks**
+- **Prompt injection and jailbreaks:** users may try "ignore your instructions." Keep your system prompt strict, never put secrets in it, and don't give the bot tools that can do damage.
+- **Off-topic misuse:** tell the bot in the system prompt to only answer about your topic.
+- **Gemini safety settings:** the API has a `safetySettings` field to block harassment, hate, and dangerous content.
+- **Output limits:** set `maxOutputTokens` so replies stay short and cheap.
+
+**4. Web security**
+- **XSS (script injection):** my example uses `textContent`, which is safe. If you later render Markdown or HTML from the bot, sanitize it with **DOMPurify**.
+- **CORS:** only allow your own domain to call `/api/chat`.
+- **HTTPS:** Vercel provides this automatically.
+- **Security headers:** add Content-Security-Policy and similar headers in `vercel.json`.
+- **Input validation:** already covered by the length and type checks, but always validate on the server.
+
+**5. Privacy and legal**
+- **Privacy policy and notice:** tell users their messages go to Google's API.
+- **Avoid collecting personal data:** warn users not to share passwords, ID numbers, or health details.
+- **Data retention:** don't store chat logs longer than you need, and don't log full messages if you can avoid it.
+- **Local laws:** depending on your users' location, rules like GDPR or India's DPDP Act may apply.
+
+**6. Monitoring and reliability**
+- **Logs:** Vercel Logs show errors and traffic spikes.
+- **Error tracking:** Sentry has a free tier.
+- **Uptime alerts:** UptimeRobot or Better Stack notify you if the bot goes down.
+- **Usage dashboard:** check your Gemini quota in Google AI Studio regularly.
+
+**7. Code and dependency safety**
+- **`npm audit`** to find vulnerable packages.
+- **GitHub Dependabot** to auto-update dependencies.
+- **Don't return raw errors** to users, since they can reveal internal details. Log them on the server and show a friendly message.
+
+**Priority order if you're starting out:** protect the key, then rate limiting (done), then Turnstile, then a strict system prompt, then monitoring. The rest can come as the bot grows.
+
+I can write the system prompt with `safetySettings`, or add Turnstile to your code, if you'd like either.
