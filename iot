@@ -1,0 +1,29 @@
+Here are the points from the image in **medium-length, easy exam language**:
+
+### 2) Lack of User Knowledge & Awareness
+
+IoT is a new technology, so many users do not know enough about its security risks. Lack of awareness can make IoT devices and networks vulnerable to attacks.
+
+Hackers may use **social engineering**, where they target people instead of directly attacking the device. Users may unknowingly provide access or connect unsafe devices.
+
+**In short:** Lack of knowledge and awareness among users can increase IoT security risks.
+
+---
+
+### 3) IoT Security Problems in Device Update Management
+
+IoT devices need regular **software and firmware updates** to fix newly discovered security vulnerabilities. However, many IoT devices do not receive automatic or timely updates.
+
+If an update is sent through an **unencrypted connection** or the update files are not protected, hackers may steal sensitive information.
+
+**In short:** Lack of secure and regular updates can leave IoT devices vulnerable to attacks.
+
+---
+
+### 4) Lack of Physical Hardening
+
+IoT devices can be placed in **remote or unattended locations** for long periods. If they are not physically protected, attackers can tamper with the device or insert malware using devices such as USB drives.
+
+Manufacturers should provide physical security for IoT devices, but adding strong security to low-cost devices can be challenging.
+
+**In short:** Poor physical protection can allow attackers to directly tamper with IoT devices.
