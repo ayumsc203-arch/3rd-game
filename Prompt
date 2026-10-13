@@ -1,0 +1,357 @@
+Worked for 1m 17s
+
+### Doraemon Puzzle Adventure — UI, Rooms, Gadgets & Story
+
+For your Android Studio Java game, you can build a Doraemon-inspired adventure interface with a room-exploration screen, gadget collection, inventory, character switching, clues, and puzzle levels.
+
+The image above is a visual concept for the game's UI. Below is a practical design reference you can use while developing it.
+
+### 1\. Main game UI
+
+![あのころの - 【ドラえもん】のび太の家の二階について](https://images.openai.com/static-rsc-4/HgTeblCXs7j5jueyoiARTp69WvnVy_MMataU1LQRLtmdNQ3mX-E7A1LPw6aennqlv27igoAR9yuQ8PqtqxRDr6rN6GI3uchXn7C4o4ThTwmDs7qn4HXv_2jUk6aSOTGTH2js_1IBaNQ-rXuPnlBiJ7HEyEeHHOjXg57nGjDJPwN-uTlmtNs3r8FsOZdMSprp?purpose=fullsize)
+
+A. Room exploration screen
+
+* Large room illustration in the center.
+
+* Tap objects to inspect them.
+
+* Inventory bar along the bottom.
+
+* Gadget button, hint button, pause button and star counter.
+
+* Glowing outlines identify interactive objects.
+
+![哆啦A梦的四次元口袋 盘点那些实体化的神奇道具-新浪电竞_电竞赛事_直播报道_新浪电子竞技](https://images.openai.com/static-rsc-4/jaYfszz1118-8dkfjyjHGsQgXTiM4Bayd0CZ4zchvx1vKxtQmPtE_qVx3j9cIyMOoZUVkX9MrzpghpeG0IP487OeFHe9JEtQYNPYBmQvpSysgrPBEwuDg9n85Bhvn1LIUa-wcnigZEiaU_pECNPESxQ7SxGDnZVAwqyfFH1wr621mKPCugyaERkyTganQf4_?purpose=fullsize)
+
+B. Gadget collection screen
+
+* Grid of gadgets with icons.
+
+* Gadget name, description and ability.
+
+* “Use” button and a short usage animation.
+
+* Locked gadgets appear as silhouettes until unlocked.
+
+![最受日本小朋友歡迎的動漫人物不是皮卡丘？盤點在日｜造咖](https://images.openai.com/static-rsc-4/qWF3WEbhrTl-rVxxosPQz7DkRAI49imiuGC9yvajzU11C5eNYMX_OfZdn1M1OX_vgptmBZchFnTZMsPT9Gu5W0OFGcEJm2TQOqzRfbQgxcCzKsNGRvuKqlO0BnPlD4XmQCWe2bJP4uv1gICvqJqj7-Y9Lh_t8oB7frE658xJsEZwCENbium6m9J14PwNrcQ7?purpose=fullsize)
+
+C. Character selection screen
+
+* Character portrait and abilities.
+
+* Switch between available team members.
+
+* Give each character a useful role in selected puzzles.
+
+* Show friendship and story progression.
+
+### 2\. Rooms and locations to include
+
+These are useful locations from the Doraemon world to use as inspiration for your level design. Some details vary across episodes, films, and adaptations.
+
+![「ドラえもんに休日を！！」「手作り工作をほんものに」｜ドラえもんチャンネル](https://images.openai.com/static-rsc-4/KHHvNBf9RoaNgcy_at5-vGMeZeaCQHVPfeYjuBvfJxN70B62DkfntgsT9Gg5_mJhuB07ukodmp3t3mqW3nbX5MWkP__w3G6_T5XCEqpnpsN4D2CQoBfJ0SC2M_EJWD_iMiDxFB8zUPZd_oRm8GqvsejFPx-POWCu6DR6w6v3QQTbpKM23pUtzb4iKdZz4A_y?purpose=fullsize)
+
+1\. Nobita's bedroom
+
+Best first level
+
+Objects: Desk, drawer, bed, bookshelf, schoolbag, window and clock.
+
+Puzzle idea: Find a key, open the drawer, discover a gadget and reveal a hidden clue.
+
+![55 năm đã trôi qua, căn nhà của Nobita và Doraemon vẫn rất hiện đại: Người Nhật là thiên tài "du hành thời gian"](https://images.openai.com/static-rsc-4/7Pd_f7wpYVm6JHN7mSF8lXf7Gr0ESfk3RIrqzTPpS9NwZpco3aVy_0wQjxTyXYrv5bpY1yIswRV43wXuvnkOcK85C0MULGgwKQHFOIRnZYVP221ODmV6NDHF0rFnsZj0i2w0g7py5Xi7PL6zqW-zh0ZrBH4c9A2twYAZCcA2wobYIXBmhsWAds0vXxxAvYUC?purpose=fullsize)
+
+2\. Nobi family living room
+
+Objects: Sofa, television, table, cupboards and family photographs.
+
+Puzzle idea: Find a missing object by following clues around the room.
+
+![Pin di Richard Fidello su IMPA International Motion Picture of Association](https://images.openai.com/static-rsc-4/0Cu30yxCFbjQ4S8YuHSq-A9EhjkkwdZXLnlPv_5BR5AR_9p3eZ9LjJyfZL0L5v_woucExxxBcY7bN7w0LObTGmHt82oH333ui5J2xhnGgvBD7FVOb6Hx6PReMUsk1ZkWHWbLFIvGkgsk7Vauu7rGGIIlq0M1AuNoZ6YwoLDyoP2bviTHJ58YBD5pPeY_A9Qr?purpose=fullsize)
+
+3\. School classroom
+
+Objects: Desks, blackboard, books, schoolbags and teacher's table.
+
+Puzzle idea: Solve a number or pattern puzzle to find a hidden message.
+
+![Doraemon Berhenti Tayang di RCTI dari Akhir Desember 2025 - bangka.sonora.id](https://images.openai.com/static-rsc-4/3EGABriSfr9-P9uCdffe_EqD0AMMdzDuu-7PBw99QMllVwmEy531sCGEl1bAl4S_D0FHFZcQQaJHu6qUMP6-b_8yb6TFS6ijkDvVt03dCEndUjfXMoz0IoJtK5Ts7uxioU_g2bRkDiStu4wHrlgWLPE6NfFcLrAC59Jd5Bit87zSzryIZiaADMyvLjcfIeUW?purpose=fullsize)
+
+4\. Neighborhood playground
+
+Objects: Playground equipment, rocks, trees, balls and hiding places.
+
+Puzzle idea: Use a flying gadget or magnifier to find clues in hard-to-reach places.
+
+![โดเรม่อน ตอน คอปเตอร์สำหรับบ้าน \[HD\] - BiliBili](https://images.openai.com/static-rsc-4/e2RCTI-kJAv7CnXD8bT7JhxQLvMYCXSLnpTQOXq-iQoMRzBufTKgl_cjaiLnrwc8-dJvVeH_rQQzbARijsoDR-BHaokBcIrJhfHsE3YaGb8II2GLgubxQLhK5rRpmGsZnKFuphHSWn2-ftb6GrvJs_26iDQM0WnYhp1A5Vjg-O4cEl8CZSpLylPCe0Ae2wck?purpose=fullsize)
+
+5\. Neighborhood streets and shops
+
+Objects: Shop shelves, signs, doors, packages and street landmarks.
+
+Puzzle idea: Collect objects from different locations and return them to the right place.
+
+![ドラえもんのタイムマシンは実現できる？ー相対性理論で考える“もしもの未来”｜宇宙初心者ラボ](https://images.openai.com/static-rsc-4/Gm4aiL7dFW-hNT2xzKTlDzREt9vRoY7eZd1h6YsHUX2DvIIWu59JtD23qb3XNBJYzhegh3zPIRMZAQhnN83tSduKpRAGU_VDiQ4-1EZxStTJ_F2eiuW0XzAgPpcyAseXp-EQWZsgsdVRNP4WjXcFGBo0wrpUmPDHPxIoh3god8-p2YtVUw1Z_tmrlF9nc2Ht?purpose=fullsize)
+
+6\. Future laboratory
+
+Objects: Control panels, robotic devices, energy cells and portals.
+
+Puzzle idea: Connect energy circuits and operate a time-travel device.
+
+![Discover the Fascinating World of Doraemon’s Gadgets | Doraemon, Classic cartoons, The time machine](https://images.openai.com/static-rsc-4/bdBF8wP-bfRfqW3zWk5SKAgw4zJfNKeqwDJ7CILPX5CBw4cD011r4hm5mMUyQJwmTD9ZjIGolmmNKTAqSwirgUL_CWkim1if6EfWe3deXYpGVZGAPc_fq58yCJbUsj1LiNsMDQ56RM5d-TCejCaIOn9FH90iXP64rSR0PBIcC4KkP4NodA5c5KYtqXk4fV57?purpose=fullsize)
+
+7\. Future world
+
+Objects: Futuristic transport, robots, control consoles and time portals.
+
+Puzzle idea: Repair a machine and travel to the correct point in time.
+
+![Fantastis 22+ Wallpaper Animasi Doraemon 3d - Joen Wallpaper](https://images.openai.com/static-rsc-4/yqrgB8JpxxNn-JnHSRtjpWlu7ibM8p49X_-48egbkS3qOZ2MKPclbiEV_SpgwxNo3QuUdPXLj8XRX12IaftfKrJ8-Uy31VC_QA03oz7sLUdclz3TlvgYSR03isKxSHej_Un7nQ84CuOYEeoRiuB0PsxZxQLAjopvMF5n9jiT6xAfJJ7rdLHtk5-NSFkKOUwu?purpose=fullsize)
+
+8\. Adventure and fantasy worlds
+
+Objects: Ancient doors, unusual plants, bridges, caves and mysterious symbols.
+
+Puzzle idea: Combine gadgets and teamwork to cross obstacles and uncover a secret.
+
+### 3\. Famous Doraemon gadgets — names, appearance and function
+
+Doraemon has an enormous collection of gadgets across the manga, TV series and films. There isn't one practical, universally complete list, so the following covers many of the best-known gadgets and the ones most useful for a puzzle game.
+
+The gameplay uses below are suggestions for your game, not necessarily the exact rules in every cartoon episode.
+
+![Discover the Fascinating World of Doraemon’s Gadgets](https://images.openai.com/static-rsc-4/gQvI5Fza_PT3gqHxqntuBiCxxAVoOOFh-ktVjHwIAbZTw1EtV57c-tA0Vb87hzd4H87EndhGiMaviVfSGXPy-gGYoDx1AkBCGF7qV5cUk8GC2VfTVVPM0dgcHU7d1nie7xY3BWtDaSWUbliMA4W77OUejYBT7OK9ei2msb_M3FedvZi1k8cwTUah_enHchqm?purpose=fullsize)
+
+1\. Anywhere Door
+
+Looks like: A pink door with a handle.
+
+What it does: Lets users travel to a chosen destination by opening the door.
+
+Game use: Connect two rooms or teleport to a previously discovered location.
+
+![おはなしリスト｜ドラえもん｜テレビ朝日](https://images.openai.com/static-rsc-4/orEM-WhM5a8prmV9YmHrfDi73iOlM3FxrSeegStv55Ss2_7-_WhTAQ4_Wefy7-CA4bUujxtiAQFmjQvHUJbpSQlNnQ9ddTfsSu5yh1TklNQWCuZ4YPwd4gwUlDVYfFy6EG-IJRm0H4PaTmDWnxzlecbGOMg88Rb_eSxWCaAOBmvDbY--DQHN5o9_Nzk7HMHd?purpose=fullsize)
+
+2\. Bamboo Copter (Take-copter)
+
+Looks like: A small rotor attached to the head.
+
+What it does: Allows a person to fly.
+
+Game use: Reach rooftops, high shelves or floating platforms.
+
+![盤點《哆啦A夢》10大瘋狂OP法寶！屈機過失憶電筒　輕鬆毀滅地球](https://images.openai.com/static-rsc-4/t94BRgaNs-Wl05Z3IiY2elmFNH0GVKCJT_hkAQ0pYn9jnkF6avc5390fkRfi5o0bGlPxFxQbdWmnYXom1fQrmuNxsF-aMs1zS50f-L_7Frta6s8TUh3zAkQPcugaIumAMv51AHEJ4WEA2qXefoG9_K0RGAcwIAMWURkad-tl2FhaJDIioi8EbP6kMVyDV5QB?purpose=fullsize)
+
+3\. Time Machine
+
+Looks like: A futuristic vehicle used for time travel, commonly accessed through Nobita's desk drawer.
+
+What it does: Travels between different times.
+
+Game use: Visit the past to find a missing clue, then return to the present.
+
+![Nostalgia Kantong Ajaib, Ini Deretan Alat-Alat Ikonik Milik Doraemon](https://images.openai.com/static-rsc-4/XqNnJB2CFHseCqpfjcpA1E0_qwko3_rsAcrtjQKBhQc6UYcMuwi6UZos4wcFo1OQzAK0MmGJyGCnIAgWdMPft39edo-U4t3kEXefrcBN52rdt7xnFZXR_AXsRFO7qluVXfeTZH94mMgD440hlL8_Yk2XpDc2Wmi61isLVjwHJ5DqOfJR6Ig-TSrk_BfpuE1u?purpose=fullsize)
+
+4\. Small Light
+
+Looks like: A handheld flashlight-like device.
+
+What it does: Shrinks the target.
+
+Game use: Shrink a character or object to enter a tiny passage. Effects and limitations depend on the episode.
+
+![ドラえもんの道具、【スモールライト】と【ビッグライト】はどちらが優れているか？（けいじ） | 30歳からのＶ系バンドのススメ](https://images.openai.com/static-rsc-4/aNIq1GU15ftzFLBTo_cUsPlDacTHFsaQscEucUsM1YPHfosBVGCOZzmi2SZpz3OATqqDgex_i_3BDjoXx2VKfGQ97kYRT3_cyC-YUFciUzPKKEXh-fA056J0uDNxCaKt1UmmI3wTkLFdEpVAORiTi6XBu8prz2K4uNth6no90XHW_89g30hn1VjIUzKVpMMH?purpose=fullsize)
+
+5\. Big Light
+
+Looks like: A handheld light device.
+
+What it does: Enlarges the target.
+
+Game use: Enlarge a small key or object so it can operate a large mechanism.
+
+![7 Alat Doraemon Yang Paling Sering Digunakan - Greenscene](https://images.openai.com/static-rsc-4/VTn4QtJ09K_7OlDcMpPdsEN1x9Y3Gnkqgg3tnirUL5aQ56QALgIuOYaXXz98xIIqx2dcvNqjTJT1XvCQ4lquAEDiUF25AQZ_-I9msFZ4PlyDr7qF4R_rSY5xq_X9VdoM1Y6aYDObkW0uOD8cjVReh5h8YKYApQospd4gdAmUsYjmi04rjQfBtsRy7NpXmSpC?purpose=fullsize)
+
+6\. What-If Phone Booth (Moshimo Box)
+
+Looks like: A pink telephone booth.
+
+What it does: Creates an alternate world based on a hypothetical wish.
+
+Game use: Change a rule in the room to open a new puzzle path.
+
+![ドラえもん 設定\[制作素材\]](https://images.openai.com/static-rsc-4/BjkNLCzszieO1viibTWnoZppnFovltmrT0wKuEW5MT5eT7U_qYrCtHRrywxoXKhLCzErnJ_ZPM-UHmNHUssdIaLnFyTnde10Po-Jp5Tmj3VQzF-Xw0TvJ3R1gKxOlMuTsKin3IKVr1-pEU1j75OkQNJvdreqQ_iblOQwr3c6Z-8ovfDD5UX3Ql91VXTRmqCS?purpose=fullsize)
+
+7\. Translation Konjac
+
+Looks like: A small piece of food.
+
+What it does: Allows the user to understand other languages.
+
+Game use: Understand messages from characters or clues written in another language.
+
+![이것은 도라에몽의 암기빵 - OP.GG](https://images.openai.com/static-rsc-4/jbDXwvFVqE6WDabG99qZ8ZK0cZfCMQP8DvtuSYXJvRkeA9dbcqivPy94o9zfmPzjtxLhiew2UQZCNOhailHj0sdxE0gptdv896CFztF2pqBDOXeftI1aWxmgnyI93fedmx23dfDP6NCu8k9Wv3lSuXg-ZglCkIciWBPnFQrDv_AfUE1ucFZje1NU6hSwyLJ6?purpose=fullsize)
+
+8\. Memory Bread (Anki Pan)
+
+Looks like: Slices of bread.
+
+What it does: Helps the user memorize text by pressing it onto the bread and eating it.
+
+Game use: Memorize a code or a page of clues.
+
+![【视频】真哆啦A梦迷，国内玩家DIY巨型空气炮，35米外打倒纸箱墙|界面新闻 · JMedia](https://images.openai.com/static-rsc-4/LyHguo7NXsLC9Hh5jewp4GyTa3VItihwOLd9hrXGpqBBJ1LQWEGqgipujNmPsN7xB_-U6DphlbrIcD88mByODWfAjZTndOoj8UvluNtdQc1vGSsszXzMD32RsoEEJZuwQshaAviwZDFo1GPFT2aMXIp2DM6HLgUVDwC8oSf4wP7e5KYxCtnoQDBzpbUVhYYQ?purpose=fullsize)
+
+9\. Air Cannon
+
+Looks like: A small cannon-like device worn on the arm or hand.
+
+What it does: Fires a blast of air.
+
+Game use: Push distant switches, move light objects or trigger mechanisms. Use a gentle, nonviolent puzzle design.
+
+10\. Time Cloth
+
+Looks like: A cloth or wrap.
+
+What it does: Changes the age or condition of an object, depending on how it is used.
+
+Game use: Restore a broken object or make an old object new again.
+
+![Sankei MP08-06 Doraemon Mini Copying Toast | PlazaJapan](https://images.openai.com/static-rsc-4/pAbEgFnL8pw-h3oqeHvKnWh9aJ7LqRZP9GJ_1cJekQWVQDrMabZHKSLcmwFlg_MO-49nMSnmKDye-lDPpJW9ZP5ODUsZJPhsGDREQNNZ2nYAPhmPoFSQLCMWtJzrgxu5CM83GKYeBg_v4MKlXZkhDZ_vIhxtMI2Pd5Sx8bFBL0ksCkaaTh3MbJ1_aB7hgohy?purpose=fullsize)
+
+11\. Copying Toast
+
+Looks like: Special toast used to make a copy of something.
+
+What it does: Copies an object or image in its familiar depictions.
+
+Game use: Duplicate a tile, symbol or required puzzle object, with limits defined by the level.
+
+![ドラえもん Android(960×854)待ち受け ドラえもん アニメ-スマホ用画像383063](https://images.openai.com/static-rsc-4/9ZlSnKwXZc-ALzbDApkPbBV-qwPrt7uqbIutuEh_fCKllCrfnWVxGSGz6LSeszwgpA4-3wiNKaHh_fNbDoQB_v2T_QPZiovfLGJGPxT4d_yx4354TqRmwYTVr5BbXd1fVrqy2W2ALcFkh-2l2H_vTzGtY9NX4yYUa89KibYtPwMFCwJNuTZLpa_sMgN8otHu?purpose=fullsize)
+
+12\. Location-finding gadgets
+
+Looks like: Varies by gadget and episode; often a small electronic device.
+
+What they do: Help locate a person or object.
+
+Game use: Show a directional clue or highlight an area to search. Choose a specific canonical gadget before using its official name in the game.
+
+![ยิ่งกว่าฝันไป คอปเตอร์ไม้ไผ่ วุ้นแปลภาษา '9 ของวิเศษโดราเอมอน'ที่ถูกทำให้ใช้ได้จริง - Minimore Feed](https://images.openai.com/static-rsc-4/0z7FXbYUZoLrIIALP-yvt4cnLLjwLsCKhKGrJbKjuDuxTUYtQ8R1KdriMYn-KNAD-qtvVyHXnBiynJ02XTthtgx64h4kgfRE6hpHWufPTjPFE4K4chnYwI7l6x2UvQyyPYVpo1Uk_J6gENOAbVAlt9DkyXwi6EsVd70S_J3N7N8oomsOZnvKOsSBrnWC97aj?purpose=fullsize)
+
+13\. Invisibility gadgets
+
+Looks like: Varies by episode; may be a wearable item.
+
+What they do: Make a person or object invisible.
+
+
+Game use: Pass a security device or reveal a hidden route without being detected.
+
+![３.タイムテレビ - ドラえもん　ひみつ道具完全大図鑑](https://images.openai.com/static-rsc-4/6rFj9FWol46fYh6Iagg2ua2N2PWgYitw513RI9QVUp0PCjApRDXkeR7BUVOZCImn3keOM28xmrehAVbX2hvAA1w1F2UgjjOAbNKswk22wZI5BoRheoCd1-qdlKVAdtrmyJ_pYcqwQDneNpqmX1B-xXnJc61e9yRn9CfXU4YaF4XjNPY5iKCOAFgMUZEn_j6f?purpose=fullsize)
+
+14\. Time TV
+
+Looks like: A television-like viewing device.
+
+What it does: Lets the user observe events at other times in its familiar appearances.
+
+Game use: Watch a past event to learn where a missing object was placed.
+
+Other gadgets worth researching for future levels include the Memory Bread, Copying Toast, Propeller-powered flight devices, Camera-based transformation gadgets, Dress-up Camera, Underwater Pump, and various robots and protective devices. Some gadget names and functions vary across translations and adaptations, so verify an individual gadget before presenting it as canon.
+
+### 4\. How the gadget screen should work in your game
+
+Use a grid with four tabs:
+
+| Tab          | What it contains                             |
+| ------------ | -------------------------------------------- |
+| Travel       | Anywhere Door, Time Machine                  |
+| Movement     | Bamboo Copter and other movement gadgets     |
+| Object tools | Small Light, Big Light, Time Cloth           |
+| Information  | Translation Konjac, Time TV, finding devices |
+
+When the player taps a gadget, open a detail panel containing:
+
+* Gadget illustration
+
+* Official or selected name
+
+* Short explanation
+
+* How to activate it
+
+* Compatible objects in the current room
+
+* A Use button
+
+* A hint if it cannot currently be used
+
+For your first prototype, implement only three functional gadgets: one that reveals clues, one that changes an object's size, and one that unlocks travel between rooms. Add more after the core puzzle system works.
+
+### 5\. Story of the Doraemon cartoon
+
+![Doraemon Fun Quiz | Quizard](https://images.openai.com/static-rsc-4/26vQpupPPOK8EiqGgsViXAtqXNd-hBhpiV8meg4CsBRXxm4qn-c3Q8BLKG41dSajBH5_fVY8lZJvQ1M4jcOr9y0xlEAuHnAgyFjW0V6scectII6y405-4hVbd3dpCWfZM3LHdn-D4huI1SCvWfbb1-H5fWvj7BRbyBdDUyesuBTN2tKM6SuTf-sggcIVXxRf?purpose=fullsize)
+
+![Which gadget you wants..?? | Anime crafts, Doraemon, Kindergarden activities](https://images.openai.com/static-rsc-4/WACpEvr9WkuHsWwtHBY1ApA8rj3v7t2CkXkOumjQzpPJUF4C9y3k3RJGs0ziHU9KyoM3T5D5qH6UU2lzORiliy8BEMvC9QFlhCIqcopY4Rel3ri-sVb5_Fk1AGnhmFuTKCH48NURkGGknp8HcfeA7cCqpeKap-b-vJCKa8ozjuw-G9OvemrZLy2abkTSEvVm?purpose=fullsize)
+
+![Discover the Fascinating World of Doraemon’s Gadgets | Doraemon, Classic cartoons, The time machine](https://images.openai.com/static-rsc-4/bdBF8wP-bfRfqW3zWk5SKAgw4zJfNKeqwDJ7CILPX5CBw4cD011r4hm5mMUyQJwmTD9ZjIGolmmNKTAqSwirgUL_CWkim1if6EfWe3deXYpGVZGAPc_fq58yCJbUsj1LiNsMDQ56RM5d-TCejCaIOn9FH90iXP64rSR0PBIcC4KkP4NodA5c5KYtqXk4fV57?purpose=fullsize)
+
+Doraemon is a Japanese science-fiction comedy about a robotic cat named Doraemon, who comes from the future to help a boy named Nobita Nobi.
+
+Nobita often struggles at school, has trouble with confidence, and gets into everyday problems with friends and family. Doraemon uses futuristic gadgets from his four-dimensional pocket to help him. However, the gadgets frequently create unexpected complications, leading to funny adventures and lessons about responsibility.
+
+Important recurring characters include:
+
+* Doraemon: The robotic cat who brings gadgets from the future.
+
+* Nobita Nobi: The kind-hearted boy whose problems often start the adventure.
+
+* Shizuka Minamoto: A thoughtful and helpful friend.
+
+* Takeshi “Gian” Goda: A strong, sometimes intimidating friend who can also show loyalty.
+
+* Suneo Honekawa: A clever, boastful friend who likes showing off.
+
+* Dorami: Doraemon's younger robot-cat sister, who appears in various stories.
+
+Many episodes focus on friendship, honesty, courage, responsibility and the unintended consequences of relying too heavily on shortcuts. The time-travel elements and gadgets provide the science-fiction setting, while the relationships and lessons give the stories their emotional core.
+
+### 6\. Original story idea for your puzzle game
+
+For a first level, you could use this structure:
+
+Chapter 1 — The Mystery of the Bedroom
+
+Nobita wakes up and discovers that an important note has disappeared from his desk. Doraemon notices a strange signal coming from a locked drawer. The player searches the bedroom, finds a clue in a book, locates the key, and opens the drawer to discover a gadget.
+
+The gadget reveals a hidden symbol. By interpreting that symbol and interacting with the right objects, the player opens a secret compartment and discovers that the missing note is actually a message from the future.
+
+Chapter 2 — The School Mystery
+
+A strange sequence of symbols appears in the classroom. The player searches the desks and blackboard, solves a logic puzzle and uncovers the next destination.
+
+Chapter 3 — A Door to Somewhere Else
+
+The player uses a travel gadget to reach a new location, where objects and clues must be collected in the correct order.
+
+Chapter 4 — The Future Lab
+
+The group discovers the source of the signal. The player repairs a machine, combines clues from earlier rooms and learns why the message was sent.
+
+Final Chapter — Teamwork Saves the Day
+
+The group must combine the skills learned throughout the game to solve a final multi-stage puzzle. The ending rewards exploration and teamwork rather than simply using the strongest gadget.
+
+These are proposed game chapters, not plots from actual Doraemon episodes.
+
+Important for publishing: Doraemon's characters, official gadget artwork, names, logos and story material are protected intellectual property to varying degrees. For a private learning prototype you can study the series, but distributing a Doraemon-branded game generally requires checking the relevant licensing and legal permissions. For a game you can publish independently, use original characters, gadget designs, names, and storylines inspired by broad themes such as time travel, friendship and imaginative problem-solving.
+
+5
+
+5
+
+5
