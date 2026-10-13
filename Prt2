@@ -1,0 +1,598 @@
+PROJECT: 2D PUZZLE ADVENTURE — ANDROID STUDIO + JAVA
+
+1. Your Role
+
+Act as a senior Android game developer and software architect. Build a complete, playable 2D puzzle-adventure game using Android Studio, Java, and the native Android SDK.
+
+Do not use Godot, Unity, Flutter, React Native, or Kotlin. Use Java for all application and game logic.
+
+The game is inspired by the feeling of a friendly, gadget-filled cartoon adventure, with original characters and assets unless the developer has secured the necessary licenses.
+
+Do not merely provide explanations or pseudocode. Create the actual project files, implement the gameplay, configure the project, and provide instructions to build and run the game.
+
+2. Project Requirements
+
+- Platform: Android phones and tablets
+- Language: Java
+- IDE: Android Studio
+- Graphics: 2D
+- Orientation: Landscape
+- Game mode: Single-player
+- Camera: Fixed room-based camera
+- Structure: Level-based progression
+- Audience: All ages
+- Connectivity: Fully playable offline
+- Budget: ₹0 for the prototype
+- Monetization: Free; no advertisements or in-app purchases in the prototype
+- Languages: English, Hindi, Japanese
+- Input: Touchscreen, with mouse input supported where practical for desktop testing
+- Minimum supported Android version: Choose a sensible API level compatible with the available development environment and document it.
+- Rendering: Use a custom Android "View" with "Canvas" and "Paint" for the 2D game world. Use native Android layouts or custom-drawn UI where appropriate.
+
+Prefer built-in Android APIs and locally stored assets. Do not require paid services, a server, an account, or an internet connection.
+
+3. Game Concept
+
+Create a charming cartoon puzzle adventure in which a young protagonist and their friends investigate mysterious situations, collect objects, discover clues, and use imaginative gadgets to solve puzzles.
+
+The first playable level is called “The Mystery of the Bedroom.”
+
+The player begins inside a child's bedroom. A small mystery must be solved by examining objects, collecting an item, discovering a clue, and unlocking a hidden compartment.
+
+The first level should be fully playable from start to finish, rather than being only a mock-up or a static illustration.
+
+Use original placeholder names, character designs, graphics, sounds, and branding. Do not reproduce copyrighted Doraemon characters, official artwork, logos, music, or assets unless the project owner has appropriate permission. Keep the code and asset structure flexible so licensed assets can be added later.
+
+4. Gameplay Style
+
+Implement a point-and-tap interaction system.
+
+The player should be able to:
+
+1. Tap an object to inspect it.
+2. Read a short description or clue.
+3. Collect useful items.
+4. Select an item from the inventory.
+5. Tap another object to use the selected item on it.
+6. Activate a gadget when the situation allows it.
+7. Open drawers, cabinets, boxes, or other interactive objects.
+8. Receive feedback when an action is invalid.
+9. Ask for a hint if stuck.
+10. Complete the level and earn a star rating.
+
+Use large, touch-friendly interaction areas suitable for Android phones.
+
+Provide clear visual feedback when an object is selected, inspected, collected, unlocked, or completed.
+
+Do not require precise dragging or tiny touch targets.
+
+5. First Level: The Mystery of the Bedroom
+
+Create one complete room with original placeholder artwork.
+
+Include these interactive objects:
+
+- Bed
+- Study desk
+- Desk drawer
+- Bookshelf
+- Toy box
+- Wall clock
+- Window
+- Backpack
+- Locked storage compartment
+- A mysterious symbol or clue
+
+Puzzle sequence
+
+Implement the following logical sequence:
+
+Step 1: Explore the room
+
+The player taps objects to discover descriptions and clues. Some objects contain useful information; others provide atmosphere.
+
+Step 2: Find the clue
+
+The player inspects the bookshelf or study desk and discovers a clue about a hidden key.
+
+Step 3: Find the key
+
+The player examines the toy box or another designated object and obtains a small key after discovering the correct clue.
+
+Step 4: Unlock the drawer
+
+The player selects the key in the inventory and taps the locked desk drawer. If the correct item is selected, the drawer opens.
+
+Step 5: Discover the gadget
+
+Inside the drawer, the player finds an original fictional gadget, such as a miniature scanner or object-revealing device.
+
+Step 6: Activate the gadget
+
+The player activates the gadget near the mysterious symbol or hidden compartment. The gadget reveals an additional clue.
+
+Step 7: Solve the final puzzle
+
+The player uses the clue to unlock the storage compartment and discover the mystery's solution.
+
+Step 8: Complete the level
+
+Show a level-completion screen with:
+
+- A completion message
+- Time taken
+- Number of hints used
+- Stars earned
+- Replay button
+- Continue button if another level is available
+
+The puzzle must be solvable without using hints. Hints should explain the next logical step without immediately revealing the entire solution.
+
+If you improve the sequence, keep it internally consistent and make every necessary clue discoverable.
+
+6. Puzzle and Inventory Systems
+
+Implement a modular puzzle system.
+
+Create Java classes such as:
+
+- "PuzzleEngine"
+- "PuzzleState"
+- "InventoryManager"
+- "InventoryItem"
+- "InteractableObject"
+- "GadgetManager"
+- "HintManager"
+- "LevelManager"
+- "GameStateManager"
+
+Use enums or clearly defined state objects where appropriate. Avoid scattered magic numbers and duplicated puzzle conditions.
+
+The inventory should:
+
+- Display collected items.
+- Allow selecting and deselecting an item.
+- Clearly indicate the selected item.
+- Support using an item on an interactive object.
+- Display feedback for successful and unsuccessful item combinations.
+
+Puzzle progress should be tracked using explicit state, such as whether a clue was found, a key was collected, a drawer was opened, or a compartment was unlocked.
+
+Prevent duplicate item collection and impossible puzzle states.
+
+Allow the player to restart the level safely.
+
+7. Gadget System
+
+Create a reusable gadget framework so additional gadgets can be added in future levels.
+
+Each gadget should define:
+
+- Its name and description
+- Its icon
+- Its activation conditions
+- Its effect
+- Its energy or usage rules, if applicable
+- The objects or situations with which it interacts
+
+For the first level, implement one original gadget that reveals hidden clues.
+
+Keep the gadget system data-driven where practical. Do not hardcode all gadget behavior into the main activity.
+
+Future gadgets may include fictional shrinking, teleportation, flight, or object-manipulation abilities. Treat these as future gameplay concepts rather than copies of specific copyrighted designs.
+
+8. Hint System
+
+Create a three-stage hint system.
+
+- Hint 1: A gentle nudge toward the relevant area.
+- Hint 2: A clearer clue about the relevant object or action.
+- Hint 3: A more direct explanation of the next step.
+
+Hints should depend on the current puzzle state. Do not show a hint for a step the player has already completed.
+
+Track how many hints were used. Use this count when calculating the final star rating.
+
+Hints must work offline and must not require an API or internet connection.
+
+9. Star Rating
+
+Award one to three stars based on completion and hint usage.
+
+Use a transparent, configurable scoring system. For the prototype, use the following rules:
+
+- Three stars: Completed without using hints.
+- Two stars: Completed using one or two hints.
+- One star: Completed using three or more hints.
+
+Do not make a level impossible to complete because of the star rating.
+
+Store the best star rating earned for each completed level.
+
+10. Android Rendering and Input
+
+Build the game world using a custom "GameView" that extends Android "View".
+
+Use "Canvas" and "Paint" to draw:
+
+- Backgrounds
+- Room objects
+- Character placeholders
+- Interactive-object highlights
+- Inventory
+- Gadget controls
+- Dialog boxes
+- Puzzle feedback
+- Hint controls
+- Pause and settings menus
+
+Separate drawing, input processing, and puzzle logic.
+
+Recommended classes:
+
+- "MainActivity.java": Activity lifecycle and screen navigation.
+- "GameView.java": Main game rendering and touch handling.
+- "GameRenderer.java": Reusable drawing helpers and scene rendering.
+- "GameController.java": Coordinates player input and gameplay.
+- "PuzzleEngine.java": Puzzle rules and state transitions.
+- "InventoryManager.java": Inventory operations.
+- "GadgetManager.java": Gadget behavior.
+- "HintManager.java": Context-sensitive hints.
+- "LevelManager.java": Level loading and progression.
+- "SaveManager.java": Local save and load.
+- "LocalizationManager.java": Language selection and text lookup.
+- "SettingsManager.java": Sound, language, and accessibility preferences.
+- "GameObject.java": Base model for interactive world objects.
+- "InventoryItem.java": Inventory item model.
+
+You may use a different class structure if it improves clarity, but preserve separation of responsibilities.
+
+Touch input
+
+Implement reliable touch handling for:
+
+- Tapping objects
+- Selecting inventory items
+- Using items on objects
+- Activating gadgets
+- Opening menus and dialogs
+- Confirming actions
+- Closing panels
+
+Convert touch coordinates consistently and make the UI adapt to different screen sizes.
+
+Avoid creating a separate thread for every animation. If using a game loop or animation thread, manage its lifecycle safely and stop or pause it appropriately when the Activity pauses.
+
+Use simple frame invalidation or an appropriate rendering loop for the prototype. Avoid unnecessary battery usage.
+
+Screen layout
+
+- Landscape orientation.
+- Main room occupying most of the screen.
+- Inventory along the bottom or another comfortable edge.
+- Hint, gadget, pause, and settings controls in a clear UI area.
+- Dialogs that do not permanently obscure important objects.
+- Large text and buttons suitable for touchscreens.
+- Safe handling of system bars, screen cutouts, and varying aspect ratios.
+
+Keep interactive objects correctly aligned with their drawn positions across supported screen sizes.
+
+11. Art and Animation
+
+The prototype must work without purchased assets.
+
+Create simple original placeholder artwork using Canvas shapes, colors, gradients, and basic geometric illustrations. If image assets are needed, provide instructions for replacing placeholders with original artwork.
+
+Use a consistent cartoon style.
+
+Implement simple animations where practical, such as:
+
+- Object highlight or selection feedback
+- Drawer opening
+- Item collection feedback
+- Gadget activation
+- Clue reveal
+- Level-completion celebration
+
+Animations must not block puzzle interaction or cause crashes.
+
+Keep art rendering separate from puzzle state.
+
+12. Localization
+
+Support these languages:
+
+1. English
+2. Hindi
+3. Japanese
+
+Use Android string resources for menus and application-level UI. For game-specific text, use a centralized localization mechanism that works offline.
+
+Organize resources using standard Android resource qualifiers where appropriate, such as:
+
+- "res/values/strings.xml"
+- "res/values-hi/strings.xml"
+- "res/values-ja/strings.xml"
+
+Use Unicode-compatible fonts and verify that Devanagari and Japanese characters render correctly.
+
+Translate all player-facing text, including:
+
+- Menus
+- Buttons
+- Object descriptions
+- Clues
+- Item names
+- Gadget descriptions
+- Hints
+- Error messages
+- Settings
+- Completion screens
+
+Do not put user-facing text directly into gameplay logic.
+
+Allow the player to change language in Settings. Save the selected language locally and restore it on the next launch.
+
+Handle longer translated text gracefully without clipping or overlapping UI.
+
+13. Saving and Offline Support
+
+The game must work entirely offline.
+
+Use Android SharedPreferences for simple settings and a structured local format, such as JSON stored in internal app storage, for game progress.
+
+Persist:
+
+- Selected language
+- Sound settings
+- Tutorial completion
+- Completed levels
+- Best star ratings
+- Relevant saved progress
+
+If implementing save-and-resume within the first level, persist the necessary puzzle flags and inventory state.
+
+Validate save data before loading it. Handle missing, malformed, or outdated save files gracefully by starting a safe new game or restoring default settings.
+
+Do not request unnecessary permissions. Do not transmit gameplay information to a server.
+
+Ensure Android lifecycle events such as pause, resume, Activity recreation, and app backgrounding do not corrupt puzzle state.
+
+14. Menus and Screens
+
+Implement these screens:
+
+Main menu
+
+- Play
+- Level selection
+- Settings
+- About
+
+Level selection
+
+- Display available levels.
+- Show locked and unlocked states.
+- Display earned stars.
+- Make the first level playable.
+
+Gameplay
+
+- Room
+- Inventory
+- Inspect dialog
+- Gadget controls
+- Hint button
+- Pause button
+
+Pause menu
+
+- Resume
+- Restart level
+- Settings
+- Main menu
+
+Settings
+
+- Language
+- Sound toggle
+- Music toggle if music is implemented
+- Text and accessibility options where practical
+
+Level-completion screen
+
+- Stars earned
+- Time taken
+- Hints used
+- Replay
+- Continue or return to the level-selection screen
+
+All screens must function. Do not leave buttons that do nothing.
+
+If a feature is not implemented, either omit its button or clearly disable it with an explanation.
+
+15. Audio
+
+Audio is optional for the first prototype.
+
+If adding audio, use original or properly licensed sound effects. Include sound and music toggles. The game must remain fully playable with audio disabled.
+
+Do not download copyrighted cartoon music or sound effects.
+
+16. Recommended Project Structure
+
+Use a clean Java Android project, for example:
+
+PuzzleAdventure/
+├── app/
+│   └── src/
+│       └── main/
+│           ├── java/com/example/puzzleadventure/
+│           │   ├── MainActivity.java
+│           │   ├── GameView.java
+│           │   ├── GameRenderer.java
+│           │   ├── GameController.java
+│           │   ├── PuzzleEngine.java
+│           │   ├── PuzzleState.java
+│           │   ├── InventoryManager.java
+│           │   ├── InventoryItem.java
+│           │   ├── GadgetManager.java
+│           │   ├── HintManager.java
+│           │   ├── LevelManager.java
+│           │   ├── SaveManager.java
+│           │   ├── LocalizationManager.java
+│           │   ├── SettingsManager.java
+│           │   └── GameObject.java
+│           ├── res/
+│           │   ├── values/
+│           │   ├── values-hi/
+│           │   ├── values-ja/
+│           │   └── drawable/
+│           └── assets/
+└── README.md
+
+Adapt the package name and directory structure to the actual project. If the Android build system does not automatically package an "assets" directory, configure it correctly and document the choice.
+
+Use a Gradle configuration compatible with the installed Android Studio version. Do not upgrade Gradle, Android Gradle Plugin, or dependencies blindly.
+
+17. Development Phases
+
+Build the project in small, testable phases.
+
+Phase 1: Buildable skeleton
+
+- Inspect the existing project.
+- Confirm the Java package and Gradle configuration.
+- Configure landscape orientation.
+- Create the main Activity.
+- Launch a simple screen successfully.
+
+Phase 2: First playable room
+
+- Draw the bedroom.
+- Add interactive objects.
+- Implement object inspection.
+- Implement touch hit-testing.
+- Show interaction feedback.
+
+Phase 3: Puzzle mechanics
+
+- Add inventory.
+- Add key-and-drawer interaction.
+- Add puzzle state management.
+- Add gadget activation.
+- Add the final compartment puzzle.
+- Add level completion.
+
+Phase 4: Gameplay systems
+
+- Add hints.
+- Add star scoring.
+- Add pause and restart.
+- Add level selection.
+
+Phase 5: Persistence and localization
+
+- Add local saving.
+- Add English, Hindi, and Japanese.
+- Add settings and language switching.
+- Verify offline operation.
+
+Phase 6: Polish and testing
+
+- Improve graphics and animations.
+- Check screen scaling and touch targets.
+- Test lifecycle behavior.
+- Fix bugs.
+- Generate a debug APK.
+
+Do not create dozens of empty classes just to match the proposed structure. Implement a small number of cohesive classes first and expand when needed.
+
+18. Testing Requirements
+
+Create tests for puzzle logic where practical.
+
+Verify the following manually and, where possible, automatically:
+
+1. The application launches without crashing.
+2. The game remains in landscape orientation.
+3. Every intended object can be tapped.
+4. Object descriptions appear correctly.
+5. Items can be collected only once.
+6. Inventory selection works.
+7. The correct key unlocks the correct drawer.
+8. Incorrect item combinations show useful feedback.
+9. The gadget reveals the clue only when appropriate.
+10. The final compartment unlocks after the necessary steps.
+11. Hints correspond to the current puzzle state.
+12. Stars are calculated correctly.
+13. Restarting resets the puzzle correctly.
+14. Saving and loading preserve valid progress.
+15. Language changes apply to the interface and gameplay text.
+16. Hindi and Japanese characters render properly.
+17. The game works with airplane mode enabled.
+18. Returning from the background does not break gameplay.
+19. UI elements remain usable on different screen sizes.
+20. No visible button is nonfunctional.
+
+Provide a short test checklist in the README.
+
+19. Coding Standards
+
+- Use Java and the Android SDK.
+- Use meaningful class and method names.
+- Keep methods reasonably small.
+- Separate game logic from rendering and UI.
+- Avoid unnecessary dependencies.
+- Avoid memory leaks, unsafe thread handling, and blocking the UI thread.
+- Handle null values and invalid states safely.
+- Use constants or configuration objects instead of unexplained magic numbers.
+- Add comments for non-obvious game logic.
+- Do not silently swallow exceptions.
+- Log useful debugging information in development builds.
+- Keep the project straightforward enough for a learner to understand.
+- Prefer stable APIs and a build configuration compatible with the current project.
+
+20. Required Deliverables
+
+Create the actual implementation in the opened Android Studio project.
+
+Deliver:
+
+1. A buildable Java Android project.
+2. A playable first bedroom level.
+3. Functional touch interactions.
+4. Functional inventory and gadget systems.
+5. A complete puzzle path from beginning to completion.
+6. Hints and three-star scoring.
+7. Main menu, pause, settings, and completion screens.
+8. Local saving and offline support.
+9. English, Hindi, and Japanese localization.
+10. Original placeholder graphics.
+11. A README with setup, build, run, and test instructions.
+12. A list of remaining limitations and sensible next steps.
+
+21. How to Work in the Existing Project
+
+Before changing files:
+
+1. Inspect the existing project and identify the current Java package, build system, and available resources.
+2. Explain briefly what already exists.
+3. Identify the smallest set of changes required.
+4. Preserve working code and avoid deleting unrelated files.
+
+Then implement the game in manageable steps.
+
+After each major phase:
+
+- Check for compilation problems.
+- Fix errors caused by your changes.
+- Review resource names and Android manifest settings.
+- Ensure imports and package declarations are correct.
+- Summarize which files were added or changed.
+
+Do not claim the project builds successfully unless you actually run the available build or verification command. If a build cannot be run, explain how I can build and test it in Android Studio.
+
+Start now with Phase 1, then continue toward a fully playable first level. Make sensible decisions without asking me about every minor implementation detail. If an important requirement cannot be implemented as requested, explain the limitation and provide the closest practical alternative.
+
+Final goal: A small, polished, playable, offline 2D puzzle-adventure Android game written in Java and built using Android Studio, ready to test on a real Android phone.
